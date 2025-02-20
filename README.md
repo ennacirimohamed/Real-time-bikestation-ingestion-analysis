@@ -485,7 +485,7 @@ Après transformation, la couche Gold contiendra les colonnes suivantes :
 ![Pipeline pour la création des tables sur synapse](images/LoadSynapsePipeline.png)
 
 #### Objectif
-Après avoir effectué les étapes d'extraction et de transformation des données, nous passons maintenant à la phase de **Load**, où les données de la couche **Gold** sont utilisées pour créer les **tables de dimension** et les **tables de fait** dans **Azure Synapse Analytics**. Ces tables seront ensuite connectées à Power BI pour permettre des analyses et des visualisations interactives.
+Après avoir effectué les étapes d'extraction et de transformation des données, je passe maintenant à la phase de **Load**, où les données de la couche **Gold** sont utilisées pour créer les **tables de dimension** et les **tables de fait** dans **Azure Synapse Analytics**. Ces tables seront ensuite connectées à Power BI pour permettre des analyses et des visualisations interactives.
 
 ---
 
@@ -494,10 +494,11 @@ Dès que les données sont disponibles dans la couche **Gold**, une **pipeline A
 
 ---
 
+
 #### Explication des activités dans la pipeline
 
 1. **Récupération des noms des tables**
-   - La première activité, `Get Metadata`, a pour but de récupérer les noms des sous-dossiers dans chaque dossier Gold (disponibilité, stations, villes). Ces sous-dossiers représentent les **noms des tables** que nous devons créer dans Synapse :
+   - La première activité, `Get Metadata`, a pour but de récupérer les noms des sous-dossiers dans chaque dossier Gold (disponibilité, stations, villes). Ces sous-dossiers représentent les **noms des tables** que je dois créer dans Synapse :
      - **`availability`**
      - **`station`**
      - **`city`**
@@ -512,7 +513,7 @@ Dès que les données sont disponibles dans la couche **Gold**, une **pipeline A
 
 ---
 
-- **Une fois la pipeline est executé,on trouve nos views dans notre sql database sur synapse**
+- **Une fois la pipeline exécutée, je trouve mes views dans ma SQL database sur Synapse**
 
 ![](images/Views.png)
 
@@ -524,7 +525,7 @@ Dès que les données sont disponibles dans la couche **Gold**, une **pipeline A
 
 ### 4. Déclenchement des pipelines
 
-Nous avons configuré un **schedule** pour la **pipeline Azure Data Factory** afin qu’elle s’exécute **chaque jour à 21h (9PM)**. Cette pipeline permet de :
+J'ai configuré un **schedule** pour la **pipeline Azure Data Factory** afin qu’elle s’exécute **chaque jour à 21h (9PM)**. Cette pipeline permet de :
 
 - **Récupérer les données du jour** à partir des sources (API, etc.).
 - **Appliquer les transformations nécessaires** pour les nettoyer et les structurer.
@@ -539,9 +540,18 @@ Nous avons configuré un **schedule** pour la **pipeline Azure Data Factory** af
   - La conservation d'un **historique complet** des données.
   - Une préparation optimale des données pour des analyses et visualisations dans Power BI.
 
+
 ---
 
-## Nous n'avons pas pu visualiser les données  
-L'instance Power BI n'était pas accessible avec le compte utilisé pour travailler sur Azure, ce qui nous a empêchés de visualiser les données.
+## Je n'ai pas pu visualiser les données
+L'instance Power BI n'était pas accessible avec le compte utilisé pour travailler sur Azure, ce qui m'a empêché de visualiser les données.
 
-*Pour toute question ou demande d'information complémentaire, n'hésitez pas à nous contacter aux adresses suivantes : enna.mohamed02@gmail.com ou danguirbasma@gmail.com.*
+Pour toute question ou demande d'information complémentaire, n'hésitez pas à me contacter à l'adresse suivante : enna.mohamed02@gmail.com
+
+
+
+
+
+
+
+
